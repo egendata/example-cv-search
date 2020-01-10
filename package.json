@@ -4,13 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-watch": "parcel watch ./index.html",
+    "start-watch": "nodemon server/index.js",
+    "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
+    "build": "parcel build ./client/index.html",
+    "start": "npm run build && node server/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "parcel-bundler": "^1.12.4",
+    "@egendata/client": "^1.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "nodemon": "^2.0.2",
+    "parcel-bundler": "^1.12.4"
   }
 }
