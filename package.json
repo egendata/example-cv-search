@@ -6,16 +6,16 @@
   "scripts": {
     "build-watch": "parcel watch ./index.html",
     "start-watch": "nodemon server/index.js",
-    "dev": "egendata tunnel --port=3000 --subdomain=cvsearch npm run start-watch npm run build-watch",
+    "dev": "egendata tunnel --port=5000 --subdomain=cvsearch npm run start-watch npm run build-watch",
     "build": "parcel build ./client/index.html",
     "start": "npm run build && node server/index.js"
   },
-  "author": "",
-  "license": "Apache",
+  "author": "Egendata",
+  "license": "Apache-2.0",
   "dependencies": {
-    "@egendata/client": "^1.0.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "@egendata/client": "1.0.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
     "@egendata/cli": "^0.1.0",
