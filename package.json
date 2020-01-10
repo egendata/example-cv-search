@@ -2,12 +2,13 @@
   "name": "searchcv",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "build-watch": "parcel watch ./index.html",
     "start-watch": "nodemon server/index.js",
-    "dev": "egendata tunnel --port=5000 --subdomain=cvsearch npm run start-watch npm run build-watch",
-    "build": "parcel build ./client/index.html",
+    "predev": "npm run build",
+    "dev": "egendata tunnel --port=5000 --subdomain=cvsearch --unsafe npm run start-watch npm run build-watch",
+    "build": "parcel build ./index.html",
     "start": "npm run build && node server/index.js"
   },
   "author": "Egendata",
@@ -18,7 +19,7 @@
     "react-dom": "16.12.0"
   },
   "devDependencies": {
-    "@egendata/cli": "^0.1.0",
+    "@egendata/cli": "^0.2.0",
     "concurrently": "^5.0.2",
     "nodemon": "^2.0.2",
     "parcel-bundler": "^1.12.4"

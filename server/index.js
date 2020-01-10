@@ -4,9 +4,10 @@ const operator = require('./operatorClient')
 const app = express()
 
 app.use(express.static('dist'))
+app.use(operator.routes)
 
-app.listen(process.env.PORT, () => {
-  console.log('Listening on port 3000!')
+app.listen(process.env.PORT, async () => {
+  console.log(`Listening on port ${process.env.PORT}`)
 
   try {
     operator.events.on('CONNECTING', (attempt) =>

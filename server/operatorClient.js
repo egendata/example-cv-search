@@ -1,4 +1,5 @@
 const { create } = require('@egendata/client')
+const { createMemoryStore } = require('@egendata/client/lib/memoryStore')
 const { readFileSync } = require('fs')
 
 const clientKey = process.env.PRIVATE_KEY || readFileSync('./private.pem', 'utf8')
@@ -20,7 +21,7 @@ const config = {
       purpose: 'For nicer greeting',
     }
   ],
-  keyValueStore: keyValueStore
+  keyValueStore: createMemoryStore()
 }
 const client = create(config)
 
