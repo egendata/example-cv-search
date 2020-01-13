@@ -2,7 +2,7 @@ const { create } = require('@egendata/client')
 const { createMemoryStore } = require('@egendata/client/lib/memoryStore')
 const { readFileSync } = require('fs')
 
-const clientKey = process.env.PRIVATE_KEY || readFileSync('./private.pem', 'utf8')
+const clientKey = process.env.PRIVATE_KEY || readFileSync('./dev_key.pem', 'utf8')
 
 const config = {
   displayName: 'CV Search',
