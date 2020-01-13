@@ -6,11 +6,11 @@ const bundler = new Bundler('./index.html', {watch: true})
 
 const app = express()
 
-app.use(bundler.middleware())
 
 app.use(express.static('dist'))
 app.use(operator.routes)
 app.use('/auth', auth)
+app.use(bundler.middleware())
 
 app.listen(process.env.PORT, async () => {
   console.log(`Listening on port ${process.env.PORT}`)
