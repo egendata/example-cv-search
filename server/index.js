@@ -1,15 +1,16 @@
 const express = require('express')
 const Bundler = require('parcel-bundler')
 const operator = require('./operatorClient')
-const auth = require('./auth')
 const bundler = new Bundler('./index.html', {watch: true})
 
+const auth = require('./auth')
+const data = require('./data')
+
 const app = express()
-
-
 app.use(express.static('dist'))
 app.use(operator.routes)
 app.use('/auth', auth)
+app.use('/data', data)
 app.use(bundler.middleware())
 
 app.listen(process.env.PORT, async () => {
