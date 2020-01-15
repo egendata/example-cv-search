@@ -8,7 +8,7 @@
     "start-watch": "nodemon server/index.js",
     "dev": "egendata tunnel --port=5000 --subdomain=searchcv --unsafe node server",
     "build": "parcel build ./index.html",
-    "start": "npm run build && node server/index.js"
+    "start": "node server/index.js"
   },
   "author": "Egendata",
   "license": "Apache-2.0",
