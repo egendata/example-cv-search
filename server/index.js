@@ -13,8 +13,8 @@ app.use('/auth', auth)
 app.use('/data', data)
 app.use(bundler.middleware())
 
-app.listen(process.env.PORT, async () => {
-  console.log(`Listening on port ${process.env.PORT}`)
+app.listen(process.env.PORT || 5000, async () => {
+  console.log(`Listening on port ${process.env.PORT || 5000}`)
 
   try {
     operator.events.on('CONNECTING', (attempt) =>
