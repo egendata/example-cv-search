@@ -9,6 +9,7 @@ router.post('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   const accessToken = await operator.getAuthentication(req.params.id)
+  
   if (accessToken) return res.send({ accessToken })
   return res.sendStatus(404)
 })

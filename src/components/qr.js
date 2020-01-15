@@ -36,6 +36,9 @@ export default ({onToken}) => {
       {data ? <QRCode
         size={256}
         value={data.url}
+        imageSettings={{
+          src: "https://avatars0.githubusercontent.com/u/51755680?s=200&v=4"
+        }}
         onClick={() => window.location.assign(data.url)}
       /> : <p>Loading QR...</p>}
     </div> 
