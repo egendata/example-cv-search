@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/egendata/example-cv-search/compare/v1.0.1...v1.0.2) (2020-01-24)
+
+
+### Bug Fixes
+
+* 🐛 npm install inside Docker using alpine node image ([3a00263](https://github.com/egendata/example-cv-search/commit/3a002632c3c16784796541315dd9ab731a3c9655))
+
 ## [1.0.1](https://github.com/egendata/example-cv-search/compare/v1.0.0...v1.0.1) (2020-01-24)
 
 
