@@ -7,7 +7,7 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 export default ({onToken}) => {
   const [data, setData] = useState(null)
   const [token, setToken] = useLocalStorage('token', null);
- 
+
   const poll = async (id, ms) => {
     const response = await fetch(`/auth/${id}`)
     if (response.status === 404) return sleep(ms).then(() => poll(id, ms))
@@ -30,17 +30,19 @@ export default ({onToken}) => {
       })
   }, [token])
 
-  return ( 
+  return (
     <div>
       <h1>Logga in via Egendata:</h1>
       {data ? <QRCode
         size={256}
         value={data.url}
+        id="qrcode"
+        data-consent-request-url={data.url}
         imageSettings={{
           src: "https://avatars0.githubusercontent.com/u/51755680?s=200&v=4"
         }}
         onClick={() => window.location.assign(data.url)}
       /> : <p>Loading QR...</p>}
-    </div> 
+    </div>
   )
 }
