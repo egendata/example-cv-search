@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:12
 
 # Setup user
 ENV USER=cv-user
