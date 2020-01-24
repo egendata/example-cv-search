@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/egendata/example-cv-search/compare/v1.0.0...v1.0.1) (2020-01-24)
+
+
+### Bug Fixes
+
+* 🐛 dockerfile does not need to run npm build ([7b3f859](https://github.com/egendata/example-cv-search/commit/7b3f8593527780ea2874342b03d4069e8eae2645))
+
 # 1.0.0 (2020-01-24)
 
 
