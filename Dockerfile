@@ -15,8 +15,6 @@ RUN npm ci
 # Bundle app source
 COPY ./ ./
 
-RUN npm run build
-
 RUN chown -R $USER:$(id -gn $USER) /app
 RUN chmod -R 777 /app
 
