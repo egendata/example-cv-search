@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/egendata/example-cv-search/compare/v1.0.2...v1.0.3) (2020-01-24)
+
+
+### Bug Fixes
+
+* 🐛 add qr contents as attribute on canvas ([79ec406](https://github.com/egendata/example-cv-search/commit/79ec4069a5eb7fd59d25157b5199b82e73b5cdd6))
+
 ## [1.0.2](https://github.com/egendata/example-cv-search/compare/v1.0.1...v1.0.2) (2020-01-24)
 
 
